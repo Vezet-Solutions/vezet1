@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/Button";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
@@ -12,21 +14,21 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       {/* HERO */}
       <div className="wrap min-h-screen flex flex-col gap-16 items-center justify-center relative">
-        <h1 className="text-5xl md:text-[calc(1.8rem+3vw)] leading-[1.2]  font-semibold text-center ">
+        <h1 className="text-5xl md:text-[calc(1.8rem+3vw)] leading-[1.2] font-semibold text-center">
           <span className="text-grey-2">You do the </span>
-          Scouting, <br /> <span className="text-grey-2">
-            We'll handle your
+          Scouting, <br />
+          <span className="text-grey-2">
+            We&apos;ll handle your
           </span>{" "}
           Digital Routing.
         </h1>
         <Button asChild>
-          <Link href="#testimonial">Touch here
-          for your Digital Evolution</Link>
+          <Link href="#testimonial">Touch here for your Digital Evolution</Link>
         </Button>
         <a
           href="#about"
@@ -46,12 +48,12 @@ const page = () => {
       {/* ABOUT SECTION */}
       <Section id="about">
         <div className="wrap flex flex-col gap-16 justify-center">
-          <div className="flex justify-between items-center  w-full">
+          <div className="flex justify-between items-center w-full">
             <h5 className="text-grey-2 text-sm">About Us</h5>
             <SocialLinks />
           </div>
           <div>
-            <div className="text-justify  md:text-2xl text-grey-2 ">
+            <div className="text-justify md:text-2xl text-grey-2 ">
               <div className="float-right wrap-around pl-6 md:pl-20 mb-2 ">
                 <div className="w-28 md:w-60 h-28 md:h-60 relative">
                   <Image
@@ -63,17 +65,30 @@ const page = () => {
                 </div>
               </div>
               <p>
-              VEZÉT is a global leader in digital services, offering a comprehensive range of solutions, from freelance project outsourcing to expert-led tutoring. Over the years, we have proudly collaborated with prestigious institutions such as the University of Shargam, Lovely Professional University, and even international universities like London's top-tier institutions and Capella University. Our expertise spans across disciplines, and we’ve worked with students, professionals, and businesses worldwide.
-
-
+                VEZÉT is a global leader in digital services, offering a
+                comprehensive range of solutions, from freelance project
+                outsourcing to expert-led tutoring. Over the years, we have
+                proudly collaborated with prestigious institutions such as the
+                University of Shargam, Lovely Professional University, and even
+                international universities like London&apos;s top-tier
+                institutions and Capella University. We&apos;ve worked with
+                students, professionals, and businesses worldwide.
               </p>
 
               <p className="mt-16">
-              At VEZÉT, we take pride in outsourcing work to the best experts in the industry, ensuring every project receives the highest level of professionalism and accuracy. Whether it’s tutoring, freelance design, or digital services, we focus on delivering tailored solutions that meet the specific needs of our clients. Our mission is to provide seamless, high-quality, and efficient services across the globe.
-
+                At VEZÉT, we take pride in outsourcing work to the best experts
+                in the industry, ensuring every project receives the highest
+                level of professionalism and accuracy. Whether it&apos;s
+                tutoring, freelance design, or digital services, we focus on
+                delivering tailored solutions that meet the specific needs of
+                our clients. Our mission is to provide seamless, high-quality,
+                and efficient services across the globe.
               </p>
               <p className="mt-16 max-sm:hidden">
-              Finally, We deliver everything your business needs—from strategy to app development—all in one place. With our expert team, you get seamless, efficient solutions without needing to look elsewhere.
+                Finally, we deliver everything your business needs—from strategy
+                to app development—all in one place. With our expert team, you
+                get seamless, efficient solutions without needing to look
+                elsewhere.
               </p>
             </div>
           </div>
@@ -82,12 +97,14 @@ const page = () => {
 
       {/* PROJECTS SECTION */}
       <Section id="projects" className="overflow-hidden">
-        <div className="wrap flex flex-col gap-5  justify-center ">
+        <div className="wrap flex flex-col gap-5 justify-center ">
           <h5 className="text-grey-2 text-sm">Recent Projects</h5>
           <p className="text-lg md:text-2xl max-w-lg mb-10">
-          We craft innovative digital solutions that blend our passion for design and development, delivering exceptional user experiences and impactful results tailored to each client’s needs.
+            We craft innovative digital solutions that blend our passion for
+            design and development, delivering exceptional user experiences and
+            impactful results tailored to each client&apos;s needs.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10  ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {projects.map((project, index) => (
               <ProjectItem key={index} {...project} />
             ))}
@@ -105,10 +122,12 @@ const page = () => {
 
       {/* SERVICES SECTION */}
       <Section id="services">
-        <div className="wrap flex flex-col gap-5  justify-center">
+        <div className="wrap flex flex-col gap-5 justify-center">
           <h5 className="text-grey-2 text-sm">What Do I Do And How?</h5>
           <p className="text-lg md:text-2xl max-w-lg mb-10">
-          At VEZÉT, we thrive on crafting functional solutions for unique challenges. Below are some key skills we've developed throughout our journey.
+            At VEZÉT, we thrive on crafting functional solutions for unique
+            challenges. Below are some key skills we&apos;ve developed
+            throughout our journey.
           </p>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5 md:gap-10">
             {services.map((service, index) => (
@@ -122,10 +141,10 @@ const page = () => {
       {/* TESTIMONIAL SECTION */}
       <Section id="testimonial">
         <div className="wrap flex flex-col gap-5 justify-center">
-          <h5 className="text-grey-2 text-sm  text-center ">
-            what my clients say?
+          <h5 className="text-grey-2 text-sm text-center">
+            What My Clients Say?
           </h5>
-          <p className="text-lg md:text-2xl  text-center mb-10">Testimonial</p>
+          <p className="text-lg md:text-2xl text-center mb-10">Testimonial</p>
           <div className="mb-20">
             <Testimonials />
           </div>
@@ -138,4 +157,5 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
+
