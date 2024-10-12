@@ -163,7 +163,7 @@ export const SocialLinksData = [
   },
   {
     name: "Linkedin",
-    link: "https://www.linkedin.com/in/srinath-rajasekaran-b481542b9/",
+    link: "https://www.linkedin.com/company/vezet-digital-solutions/",
     icon: Linkedin,
   },
   {
