@@ -158,7 +158,7 @@ export const SocialLinksData = [
   },
   {
     name: "Instagram",
-    link: "https://www.instagram.com/vezet_digital_solution/",
+    link: "https://www.instagram.com/vezet_digital_solutions?igsh=NHU3MXVzOGR2ZDVo/",
     icon: Instagram,
   },
   {
